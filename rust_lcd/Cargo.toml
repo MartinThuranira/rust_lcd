@@ -1,0 +1,20 @@
+[package]
+name = "rust_lcd"
+version = "0.1.0"
+authors = ["martin"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "=0.6.4"      
+cortex-m-rt = "0.6.12" 
+embedded-hal = "0.2.4"  
+panic-halt = "0.2.0"  
+cortex-m-semihosting = "0.3.3"  
+
+# Access to the STM32F103 HAL.
+[dependencies.stm32f1xx-hal]
+# STM32F103RB contains a 128kB flash variant which is called "medium density"
+features = ["stm32f103", "rt"]
+version = "0.6.1"
